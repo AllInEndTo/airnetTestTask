@@ -67,10 +67,6 @@ export default function EventModal() {
                             required
                             className="pt-3 border-0 text-gray-600 text-xl font-semibold pb-2 w-full border-b-2 border-gray-200 focus:outline-none focus:ring-0 focus:border-blue-500"
                             onChange={(e) => setTitle(e.target.value)}/>
-                        <p>{daySelected.locale('ru').format("dddd, MMMM, DD")}</p>
-                        <span className="text-center text-gray-400">
-                           Дата
-                        </span>
                         <input
                             type="text"
                             name="description"
@@ -90,6 +86,7 @@ export default function EventModal() {
                                 </span>
                             ))}
                         </div>
+                        <p className="text-center">{daySelected.locale('ru').format("dddd, MMMM, DD")}</p>
                     </div>
                 </div>
                 <footer className="flex justify-end border-t p-3 mt-5">
